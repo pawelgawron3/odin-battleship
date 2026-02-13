@@ -8,7 +8,14 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs}'],
     plugins: { js },
     extends: ['js/recommended'],
-    languageOptions: { globals: globals.browser, ecmaVersion: 'latest', sourceType: 'module' },
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+      },
+    },
   },
   prettier,
 ]);
