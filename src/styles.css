@@ -58,7 +58,7 @@ main {
   transition: 0.4s;
 }
 
-.cell:hover {
+.cell:not(.user-cell):not(.hit):not(.miss):hover {
   background-color: #1e3a8a;
 }
 
@@ -89,4 +89,8 @@ main {
 
 .cell.miss {
   background-color: gray;
+}
+
+.user-cell {
+  background-color: #64ffda;
 }
