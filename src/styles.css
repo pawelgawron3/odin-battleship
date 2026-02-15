@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Orbitron', sans-serif;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  background-color: #0a192f;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+header > p {
+  margin: 0;
+  color: #64ffda;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #64ffda;
+  text-transform: uppercase;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+  background-color: #112240;
+}
+
+#userGrid,
+#computerGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  gap: 2px;
+  margin: 50px 0 50px 0;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #112240;
+  border: 1px solid #1e3a8a;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.cell:hover {
+  background-color: #1e3a8a;
+}
