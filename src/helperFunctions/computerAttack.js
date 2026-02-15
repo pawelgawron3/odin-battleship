@@ -32,6 +32,7 @@ export function computerAttack(gameController) {
   if (gameController.user.gameboard.allShipsSunk()) {
     alert('You lost! Better luck next time :)');
     gameController.gameOver = true;
+    updateGameStatus(gameController);
     return;
   }
 

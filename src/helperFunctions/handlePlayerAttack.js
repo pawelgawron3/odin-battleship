@@ -33,6 +33,7 @@ export function handlePlayerAttack(e, gameController, gridElement) {
   if (gameController.computer.gameboard.allShipsSunk()) {
     alert('You won!');
     gameController.gameOver = true;
+    updateGameStatus(gameController);
     return;
   }
 
