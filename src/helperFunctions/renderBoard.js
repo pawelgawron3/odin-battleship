@@ -5,7 +5,7 @@ export function renderBoard(gameboard, gridElement) {
     const [row, col] = cell.dataset.index.split(',').map(Number);
 
     if (gameboard.board[row][col] !== null) {
-      cell.style.backgroundColor = '#64ffda';
+      cell.classList.add('user-cell');
     }
   });
 }
