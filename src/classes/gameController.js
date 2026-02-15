@@ -6,6 +6,7 @@ class GameController {
     this.user = new Player('user');
     this.computer = new Player('computer');
     this.currentTurn = 'user';
+    this.gameOver = false;
 
     this.currentDirection = 'horizontally';
     this.shipsToPlace = [5, 4, 3, 3, 2, 2, 1];
@@ -38,6 +39,10 @@ class GameController {
 
   allShipsPlaced() {
     return this.currentShipIndex >= this.shipsToPlace.length;
+  }
+
+  switchTurn() {
+    this.currentTurn = this.currentTurn === 'user' ? 'computer' : 'user';
   }
 }
 
