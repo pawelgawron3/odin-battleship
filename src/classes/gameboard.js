@@ -39,12 +39,16 @@ class Gameboard {
     let [row, col] = coords;
     if (!this.canPlaceShip(ship, row, col, direction)) return;
 
+    const shipCoords = [];
+
     for (let i = 0; i < ship.length; i++) {
       let r = direction === 'vertically' ? row + i : row;
       let c = direction === 'horizontally' ? col + i : col;
       this.board[r][c] = ship;
+      shipCoords.push([r, c]);
     }
 
+    ship.setCoordinates(shipCoords);
     this.shipsFleet.push(ship);
   }
 

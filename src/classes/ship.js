@@ -7,6 +7,7 @@ class Ship {
     }
 
     this.length = length;
+    this.coordinates = [];
   }
 
   hit() {
@@ -15,6 +16,10 @@ class Ship {
 
   isSunk() {
     return this.length - this.#hits <= 0 ? true : false;
+  }
+
+  setCoordinates(coordsArray) {
+    this.coordinates = coordsArray;
   }
 }
 
