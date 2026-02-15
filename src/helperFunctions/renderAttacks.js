@@ -10,6 +10,7 @@ export function renderAttacks(gameController, gridElement, playerType) {
     if (gameboard.hits.some(([r, c]) => r === row && c === col)) {
       cell.classList.add('hit');
       cell.classList.remove('miss');
+      cell.classList.remove('user-cell');
     } else if (gameboard.misses.some(([r, c]) => r === row && c === col)) {
       cell.classList.add('miss');
       cell.classList.remove('hit');
