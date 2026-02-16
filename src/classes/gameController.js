@@ -7,10 +7,13 @@ class GameController {
     this.computer = new Player('computer');
     this.currentTurn = 'user';
     this.gameOver = false;
-
     this.currentDirection = 'horizontally';
     this.shipsToPlace = [5, 4, 3, 3, 2, 2, 1];
     this.currentShipIndex = 0;
+    this.computerMemory = {
+      mode: 'hunt', //'hunt' or 'target'
+      directionsToTry: [],
+    };
   }
 
   get currentShipLength() {
