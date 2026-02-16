@@ -31,10 +31,7 @@ header {
 }
 
 h1 {
-  color: #64ffda;
   font-size: 2rem;
-  letter-spacing: 3px;
-  text-shadow: 0 0 10px #64ffda;
   text-transform: uppercase;
   transition: 0.3s ease;
 }
@@ -49,6 +46,11 @@ main {
   gap: 75px;
   background-color: #112240;
   position: relative;
+}
+
+.grid-parent-div {
+  display: flex;
+  flex-direction: column;
 }
 
 #userGrid,
@@ -71,6 +73,11 @@ main {
 
 .cell:not(.user-cell):not(.hit):not(.miss):hover {
   background-color: #1e3a8a;
+}
+
+.grid-info {
+  align-self: center;
+  margin-top: 10px;
 }
 
 #rotateShip {
@@ -115,9 +122,6 @@ main {
 }
 
 #gameStatus > p {
-  color: #64ffda;
-  letter-spacing: 3px;
-  text-shadow: 0 0 10px #64ffda;
   text-transform: uppercase;
 }
 
@@ -135,20 +139,24 @@ footer {
 }
 
 footer > p {
-  color: #64ffda;
-  letter-spacing: 3px;
-  text-shadow: 0 0 10px #64ffda;
   margin-bottom: 20px;
 }
 
 #github-link {
-  color: #64ffda;
-  letter-spacing: 3px;
-  text-shadow: 0 0 10px #64ffda;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 #github-link:hover {
   transform: scale(1.05);
+}
+
+#github-link,
+footer > p,
+#gameStatus > p,
+.grid-info,
+h1 {
+  color: #64ffda;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #64ffda;
 }
