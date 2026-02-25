@@ -13,7 +13,15 @@ placeComputerShips(gameController);
 
 userGrid.addEventListener('click', (e) => handleUserPlacement(e, gameController));
 rotateShipBtn.addEventListener('click', () => gameController.rotateShip());
-computerGrid.addEventListener('click', (e) => handlePlayerAttack(e, gameController, computerGrid));
+const interval = setInterval(() => {
+  if (gameController.allShipsPlaced()) {
+    computerGrid.addEventListener('click', (e) =>
+      handlePlayerAttack(e, gameController, computerGrid),
+    );
+
+    clearInterval(interval);
+  }
+}, 1000);
 
 export function driverModule() {
   createBoard(userGrid);
